@@ -1,0 +1,141 @@
+title: SDG Dashboard
+greeting: SDG Dashboard
+description: Welcome to the Sustainable Development Goal (SDG) Dashboard Prototype <b>BETA</b>
+baseurl: /jkan
+branch: gh-pages
+logo: /img/jkan.png
+
+# Site theme
+theme: Spacelab
+
+# Authentication
+github_client_id: 95187e426b25c012a339
+gatekeeper_host: https://jkan-oauth.apps.cloud.gov
+
+# Dataset schema
+schema: default
+
+# Categories
+category_list:
+  - Poverty
+  - Hunger
+  - Health
+  - Education
+  - Equality
+  - Water
+  - Energy
+  - Economy
+  - Infrastructure
+  - Inequality
+  - Settlements
+  - Consumption
+  - Climate Change
+  - Oceans
+  - Ecosystems
+  - Society
+  - Partnerships
+
+# Link for the "fork me on github" banner. Remove this line to suppress banner.
+fork_me_url: https://github.com/gsa/jkan
+
+# Nav bar
+navigation:
+  - title: Datasets
+    url: /datasets/
+  - title: Dashboard
+    url: /dashboard/
+  - title: Organizations
+    url: /organizations/
+#  - title: Map
+#    url: /map
+
+# Collections
+collections:
+  datasets:
+    output: true
+    permalink: /datasets/:path/
+    layout: dataset
+  organizations:
+    output: true
+    permalink: /organizations/:path/
+  indicators:
+    output: true
+    permalink: /dashboard/:path/
+    layout: dashboard
+#  map:
+#    output: true
+#    permalink: /map/index.html
+
+# jekyll_get allows for you to get and store a remote json file
+#jekyll_get:
+#  - data: jkan-demo-dataset
+#    json: 'https://demo.jkan.io/datasets.json'
+#    cache: true
+#  - data: jkan-demo-data
+#    json: 'https://demo.jkan.io/data.json'
+#    cache: true
+
+# Collections (cont'd)
+defaults:
+  - scope:
+      path: ""
+      type: datasets
+    values:
+      layout: dataset
+      category: Uncategorized
+      organization: N/A
+  - scope:
+      path: ""
+      type: organizations
+    values:
+      layout: organization
+  - scope:
+      path: ""
+      type: dashboard
+    values:
+      layout: dashboard
+
+# Markdown settings
+markdown: kramdown
+kramdown:
+  input: GFM
+
+#Offline mode
+offline: false
+
+# Google Analytics
+google_analytics:
+  enabled: false
+  code: "UA-XXXXXX-1"
+
+# US Digital Analytics Program - https://analytics.usa.gov
+digital_analytics_program:
+  enabled: false
+  agency: ""
+  subagency: ""
+
+# Hypothesis.io - Annotator
+hypothesis:
+  enabled: true
+
+# Twitter
+twittercard:
+  enabled: false
+  username: "@"
+
+# Open Graph
+opengraph:
+  enabled: true
+
+# Exclude these files from the build
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - vendor
+  - .travis.yml
+  - node_modules
+  - scripts/src
+  - package.json
+  - webpack.config.js
+  - README.md
+  - LICENSE

@@ -1,0 +1,15 @@
+---
+layout: default
+---
+{% include breadcrumbs.html parent="Dashboard" %}
+<div class="col-sm-12 col-md-3 sidebar">
+  {% include dashboard/sidebar.html %}
+</div>
+
+<div class="col-sm-12 col-md-9 main">
+
+  {% include dashboard/goal.html %}
+  <hr></hr>
+  {% include dashboard/subgoals.html %}
+
+</div>
